@@ -69,4 +69,48 @@ const getStringLists = arr => {
     console.log(arr)
 }
 getStringLists([1,2,3,'four','five','six', 7])
-//17
+//17 Use reduce to sum all the numbers in the numbers array.
+const sum = numbers.reduce((acc, cur) => acc + cur, 0)
+console.log(sum)
+//18 Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and IceLand are north European countries
+const northCountries = countries.reduce((acc, cur) => acc + ', ' + cur)
+console.log(`${northCountries} are north European countries`)
+//19 Explain the difference between some and every
+// Check if SOME of the elements are similar in one aspect.
+// Check if ALL the elements are similar in one aspect.
+//20 Use some to check if some names' length greater than seven in names array
+namesGreaterThanSeven = names.some((name) => name.length > 7)
+console.log(namesGreaterThanSeven)
+//21 Use every to check if all the countries contain the word land
+countriesContainLand = countries.every((country => country.includes('land')))
+console.log(countriesContainLand)
+//22 Explain the difference between find and findIndex.
+//find: Return the |first element| which satisfies the condition
+//findIndex: Return |the position of the first element| which satisfies the condition
+
+//23 Use find to find the first country containing only six letters in the countries array
+countryWithSix = countries.find((country) => country.length == 6)
+console.log(countryWithSix)
+//24 Use findIndex to find the position of the first country containing only six letters in the countries array
+countryWithSixTwo =countries.findIndex((country) => country.length == 6)
+console.log(countryWithSixTwo)
+//25 Use findIndex to find the position of Norway if it doesn't exist in the array you will get -1.
+findNorway = countries.findIndex((country) => country.includes('Norway'))
+console.log(findNorway)
+//26 Use findIndex to find the position of Russia if it doesn't exist in the array you will get -1.
+findRussia = countries.findIndex((country) => country.includes('Russia'))
+console.log(findRussia)
+//Exercises: Level 2
+//1 Find the total price of products by chaining two or more array iterators(eg. arr.map(callback).filter(callback).reduce(callback))
+// const totalProductsPrices = products.map((elem) => elem.price)
+// const two = totalProductsPrices.filter((elem) => elem > 0)
+// const three = two.reduce((acc, cur) => acc + cur)
+
+const totalProductsPrices = products.map(elem => elem.price).filter(elem => elem > 0).reduce((acc, cur) => acc + cur, 0)
+
+console.log(totalProductsPrices)
+//2 Find the sum of price of products using only reduce reduce(callback))
+const sumOfPrrice = products.reduce((acc, cur) => parseInt(acc) + cur.price, 0)
+console.log(sumOfPrrice)
+//4 Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
+
