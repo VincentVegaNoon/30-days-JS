@@ -112,5 +112,4 @@ console.log(totalProductsPrices)
 //2 Find the sum of price of products using only reduce reduce(callback))
 const sumOfPrrice = products.reduce((acc, cur) => parseInt(acc) + cur.price, 0)
 console.log(sumOfPrrice)
-//4 Create a function which return an array of objects, which is the letter and the number of times the letter use to start with a name of a country.
 
