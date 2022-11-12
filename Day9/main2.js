@@ -52,3 +52,35 @@ getLastTenCountries(countries)
   
   
   console.log(getStartingLetters(countries))
+
+//Exercises: Level 3
+//1 Use the countries information, in the data folder. Sort countries by name, by capital, by population
+//By name
+const sortByName = countries.map((elem) => elem.name).sort()
+console.log(sortByName)
+//By capital
+const sortByCapital = countries.map((elem) => elem.capital).sort()
+console.log(sortByCapital)
+//by population
+const sortByPopulation = countries.map((elem) => elem.population).sort()
+console.log(sortByPopulation)
+
+// *** Find the 10 most spoken languages:
+// const mostSpokenLanguage = arr => {
+//   const occurences = arr
+//     .reduce((acc, {languages}) => {
+//       const spokenlanguage = languages
+//       acc[spokenlanguage] = ( acc[spokenlanguage] || 0 ) + 1
+//       return acc
+//     }, {})
+  
+//   return Object
+//     .keys(occurences)
+//     .sort()
+//     .map(language => ({language, count: occurences[language]}))
+// }
+// console.log(mostSpokenLanguage(countries))
+
+const mostSpokenLanguage = countries.map(elem => [elem.name, elem.languages])
+
+console.log(mostSpokenLanguage)
