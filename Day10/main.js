@@ -53,6 +53,3 @@ console.log(Intersection)
 let difference = a.filter((elem) => !B.has(elem))
 let Difference = new Set(difference)
 console.log(Difference)
-
-//
-//1 
