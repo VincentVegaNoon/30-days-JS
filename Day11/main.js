@@ -121,6 +121,11 @@ const student = {
   }
   const copiedStudent = {...student}
   //Add Bootstrap with level 8 to the front end skill sets
-
-
-console.log(copiedStudent)
+copiedStudent.skills.frontEnd.push({skill: 'Bootstrap', level: 8})
+// Add Express with level 9 to the back end skill sets
+copiedStudent.skills.backEnd.push({skill: 'Express', level: 9})
+// Add SQL with level 8 to the data base skill sets
+copiedStudent.skills.dataBase.push({skill: 'SQL', level: 8})
+// Add SQL without level to the data science skill sets
+copiedStudent.skills.dataScience.push('SQL')
+  console.log(copiedStudent)
