@@ -42,4 +42,42 @@ function isValidVariable(variable) {
 isValidVariable('1first_name')
 
 // Exercises: Level 2
+//1 Write a function called tenMostFrequentWords which get the ten most frequent word from a string?
+
 paragraph = `I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.`
+
+const getWords = array => {
+    let arr = array.split(' ')
+    const occurences = arr.reduce((acc, name) => {
+        const word = name 
+        acc[word] = ( acc[word] || 0 ) + 1
+        return acc
+      }, {})
+    
+    return Object.keys(occurences).sort().map(elem => ({elem, count: occurences[elem]}))
+  }
+  
+  
+  console.log(getWords(paragraph))
+
+  // Exercises: Level 3
+ //1 Write a function which cleans text. Clean the following text. After cleaning, count three most frequent words in the string.
+ sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
+ const cleanText = text => {
+    let clean = /[%@&$#?!;]/g
+    let textCopy = text.replace(clean, '')
+    console.log(textCopy)
+    let arr = textCopy.split(' ')
+    let occurances = {}
+    for (let word of arr) {
+        if (occurances[word]) {
+            occurances[word]++;
+        } else {
+          occurances[word] = 1;
+        }
+      }
+      console.log(occurances)
+ }
+  
+  
+  cleanText(sentence)
