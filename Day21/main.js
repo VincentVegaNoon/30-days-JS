@@ -46,3 +46,6 @@ allPs[0].textContent = 'First paragraph'
 allPs[1].textContent = 'Second paragraph'
 allPs[2].textContent = 'Third paragraph'
 allPs[3].textContent = 'Fourth paragraph'
+
+//3 Exercise: Level 3
+//1 Develop the following application, use the following HTML elements to get started with. You will get the same code on starter folder. Apply all the styles and functionality using JavaScript only.
