@@ -49,3 +49,16 @@ allPs[3].textContent = 'Fourth paragraph'
 
 //3 Exercise: Level 3
 //1 Develop the following application, use the following HTML elements to get started with. You will get the same code on starter folder. Apply all the styles and functionality using JavaScript only.
+const h3 = document.querySelector('h3')
+h3.textContent = showDateTime()
+function showDateTime() {
+    const now = new Date()
+    const year = now.getFullYear()
+    const month = now.getMonth() + 1
+    const date = now.getDate()
+    const hours = now.getHours()
+    const minutes = now.getMinutes()
+    h3.textContent = (`${date < 10 ? `0${date}` : `${date}`}/${month < 10 ? `0${month}` : `${month}`}/${year} ${hours < 10 ? `0${hours}` : `${hours}`}:${minutes < 10 ? `0${minutes}` : `${minutes}`}`)
+}
+const start = clock()
+setInterval(start, 1000)
