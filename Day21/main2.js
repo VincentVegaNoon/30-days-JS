@@ -1,6 +1,8 @@
 //3 Exercise: Level 3
 //1 Develop the following application, use the following HTML elements to get started with. You will get the same code on starter folder. Apply all the styles and functionality using JavaScript only.
 const h3 = document.querySelector('h3')
+const h1 = document.querySelector('h1')
+const p = document.querySelector('p')
 
 const clock = () => {    
     const now = new Date()
@@ -25,5 +27,19 @@ const changeColor = () => {
         h3.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
     }
 }
+const changesColors = () => {
+    const now = new Date()
+    const seconds = now.getSeconds()
+    const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+    if (seconds % 2 == 0) {
+       p.style.color = `rgb(${r}, ${g}, ${b})`
+    } else {
+        p.style.color = `rgb(${r}, ${g}, ${b})`
+    }
+}
+
 setInterval(clock, 1000)
 setInterval(changeColor, 1000)
+setInterval(changesColors, 1000)
